@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2.2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/task2_2.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Лабораторна робота №5. JavaScript</h1>
+        <p>Заяц М.В. &nbsp;|&nbsp; група АнД-31 &nbsp;|&nbsp; Варіант 9</p>
+        <ul class="main-menu">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="task1.html">Завдання 1</a></li>
+            <li><a href="task2_1.html">Завдання 2.1</a></li>
+            <li><a href="task2_2.html" class="active">Завдання 2.2</a></li>
+        </ul>
+    </header>
+    <main class="container">
+        <section class="task">
+            <div class="task-text"><b>Завдання 2.2.</b> Дана пуста таблиця. При натисканні на кнопку заповнити її наступним чином: парні рядки – від’ємні числа, непарні – додатні, головна діагональ – 0.</div>
+            <h2>Заповнення таблиці</h2>
+            <table id="num-table">
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </table>
+            <p class="center">
+                <button class="btn" onclick="fillTable()">Заповнити таблицю</button>
+                <button class="btn btn-gray" onclick="clearTable()">Очистити</button>
+            </p>
+        </section>
+    </main>
+</body>
+</html>

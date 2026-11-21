@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2.1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/task2_1.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Лабораторна робота №5. JavaScript</h1>
+        <p>Заяц М.В. &nbsp;|&nbsp; група АнД-31 &nbsp;|&nbsp; Варіант 9</p>
+        <ul class="main-menu">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="task1.html">Завдання 1</a></li>
+            <li><a href="task2_1.html" class="active">Завдання 2.1</a></li>
+            <li><a href="task2_2.html">Завдання 2.2</a></li>
+        </ul>
+    </header>
+    <main class="container">
+        <section class="task">
+            <div class="task-text"><b>Завдання 2.1.</b> У формі є список фруктів та поле для введення їх вартості. Після натискання Enter при введенні вартості сформувати список, в якому зазначена назва фрукту та його вартість.</div>
+            <h2>Вартість фруктів</h2>
+            <div class="form-row">
+                <select id="fruit-select">
+                    <option>Яблуко</option>
+                    <option>Груша</option>
+                    <option>Банан</option>
+                    <option>Апельсин</option>
+                    <option>Виноград</option>
+                    <option>Слива</option>
+                </select>
+                <input type="number" id="price-input" placeholder="Вартість, грн" min="0" step="0.01">
+            </div>
+            <p class="error" id="error"></p>
+            <ul id="fruit-list"></ul>
+        </section>
+    </main>
+</body>
+</html>

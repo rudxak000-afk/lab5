@@ -1,0 +1,147 @@
+/* Загальні стилі */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eef1f8;
+    color: #222;
+    line-height: 1.5;
+}
+
+/* Шапка сторінки */
+.header {
+    background: #3f51b5;
+    color: #fff;
+    text-align: center;
+    padding: 20px 15px 10px;
+}
+.header h1 { margin: 0 0 6px; font-size: 1.6rem; }
+.header p  { margin: 0 0 12px; font-size: 1rem; }
+
+/* Головне меню */
+.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+.main-menu a {
+    display: block;
+    padding: 8px 16px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px 6px 0 0;
+    background: rgba(255, 255, 255, 0.15);
+}
+.main-menu a:hover,
+.main-menu a.active { background: #fff; color: #3f51b5; }
+
+/* Основний вміст */
+.container {
+    max-width: 960px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+.task {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.task-text {
+    border-left: 4px solid #3f51b5;
+    background: #f3f5ff;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+h2 { margin-top: 0; color: #3f51b5; }
+
+/* Кнопки та поля вводу */
+.btn {
+    background: #3f51b5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btn:hover { background: #303f9f; }
+.btn-gray { background: #757575; }
+.btn-gray:hover { background: #5f5f5f; }
+
+input, select {
+    padding: 9px 10px;
+    font-size: 1rem;
+    border: 1px solid #b0b8d9;
+    border-radius: 6px;
+}
+
+/* Завдання 1: планувальник задач */
+.planner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+.column { border-radius: 8px; padding: 10px; background: #f7f7f7; }
+.column h3 { margin: 0 0 10px; text-align: center; }
+.column.done        { border-top: 5px solid #43a047; }
+.column.in-progress { border-top: 5px solid #fb8c00; }
+.column.upcoming    { border-top: 5px solid #1e88e5; }
+
+.card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    font-size: 0.92rem;
+}
+.card h4 { margin: 0 0 4px; }
+.card p  { margin: 2px 0; }
+.card .status { font-weight: 600; margin-top: 6px; }
+.done .status        { color: #2e7d32; }
+.in-progress .status { color: #e65100; }
+.upcoming .status    { color: #1565c0; }
+.empty { text-align: center; color: #888; }
+
+/* Завдання 2.1: список фруктів */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.error { color: #c62828; min-height: 1.4em; margin: 5px 0; }
+#fruit-list li { padding: 4px 0; font-size: 1.05rem; }
+
+/* Завдання 2.2: таблиця */
+table { border-collapse: collapse; margin: 15px auto; }
+td {
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #555;
+    font-size: 1.1rem;
+}
+td.negative { background: #ffcdd2; }
+td.positive { background: #c8e6c9; }
+td.zero     { background: #e0e0e0; font-weight: bold; }
+.center { text-align: center; }
+
+/* Адаптивність */
+@media (max-width: 800px) {
+    .planner { grid-template-columns: 1fr; }
+}
+@media (max-width: 500px) {
+    .header h1 { font-size: 1.2rem; }
+    .task { padding: 15px; }
+    td { width: 45px; height: 40px; font-size: 0.9rem; }
+    .btn, input, select { width: 100%; }
+}
